@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LeProjet.ViewModel;
 
-namespace LeProjet
+namespace LeProjet.View
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
@@ -23,6 +24,14 @@ namespace LeProjet
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
+
+        private void TextBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+        public char PasswordChar { get; set; }
+
     }
 }
